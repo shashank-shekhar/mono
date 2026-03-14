@@ -1,0 +1,381 @@
+[
+  {
+    "id": "code-examples",
+    "title": "Code Examples for Testing",
+    "url": "/mono/code-examples.html",
+    "date": "2024-01-16",
+    "excerpt": "Code Examples for Testing This post contains various code examples to test copy button positioning and syntax highlighting. JavaScript Example Python Example TypeScript Example Rust Example CSS...",
+    "tags": [
+      "code",
+      "examples",
+      "testing"
+    ],
+    "categories": [
+      "development"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "first-flight-hi",
+    "title": "पहली संचालित उड़ान",
+    "url": "/mono/hi/first-flight.html",
+    "date": "2024-12-17",
+    "excerpt": "17 दिसंबर, 1903 को ऑरविल और विल्बर राइट ने वह हासिल किया जिसकी सदियों से कल्पना की जा रही थी: निरंतर, नियंत्रित, संचालित उड़ान। किटी हॉक, उत्तरी कैरोलिना के पास किल डेविल हिल्स में, उनके नाजुक लकड़ी...",
+    "tags": [
+      "इतिहास",
+      "विमानन"
+    ],
+    "categories": [
+      "निबंध"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "first-flight",
+    "title": "The First Powered Flight",
+    "url": "/mono/first-flight.html",
+    "date": "2024-12-17",
+    "excerpt": "On December 17, 1903, Orville and Wilbur Wright achieved what centuries of dreamers had imagined: sustained, controlled, powered flight. At Kill Devil Hills near Kitty Hawk, North Carolina, their...",
+    "tags": [
+      "history",
+      "aviation"
+    ],
+    "categories": [
+      "essays"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "image-test",
+    "title": "Image Optimization Test",
+    "url": "/mono/image-test.html",
+    "date": "2024-12-01",
+    "excerpt": "Image Optimization Test This post tests image optimization attributes. Local Image (Hero) External Image Another External Image",
+    "tags": [
+      "images",
+      "test"
+    ],
+    "categories": [
+      "testing"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "media-features-demo",
+    "title": "Media Features Demo",
+    "url": "/mono/media-features-demo.html",
+    "date": "2024-11-12",
+    "excerpt": "Media Features Demo This post demonstrates the new media features: video embeds, image captions, and image carousels. Video Embeds Simply paste a YouTube URL on its own line and it will automatically...",
+    "tags": [
+      "demo",
+      "media",
+      "features"
+    ],
+    "categories": [
+      "tutorials"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "series-part-1",
+    "title": "Getting Started with TypeScript - Part 1",
+    "url": "/mono/series-part-1.html",
+    "date": "2024-01-10",
+    "excerpt": "Introduction Welcome to the first part of our TypeScript Fundamentals series! In this series, we'll cover everything you need to know to get started with TypeScript. What is TypeScript? TypeScript is...",
+    "tags": [
+      "typescript",
+      "programming"
+    ],
+    "categories": [
+      "tutorials"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "series-part-2",
+    "title": "TypeScript Type System - Part 2",
+    "url": "/mono/series-part-2.html",
+    "date": "2024-01-15",
+    "excerpt": "TypeScript Type System In this second part of our series, we'll explore TypeScript's powerful type system. Basic Types TypeScript provides several basic types: Interfaces Interfaces define the shape...",
+    "tags": [
+      "typescript",
+      "programming",
+      "types"
+    ],
+    "categories": [
+      "tutorials"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "series-part-3",
+    "title": "Advanced TypeScript Features - Part 3",
+    "url": "/mono/series-part-3.html",
+    "date": "2024-01-20",
+    "excerpt": "Advanced TypeScript Features Welcome to the final part of our TypeScript Fundamentals series! Let's explore some advanced features. Generics Generics allow you to create reusable components that work...",
+    "tags": [
+      "typescript",
+      "programming",
+      "advanced"
+    ],
+    "categories": [
+      "tutorials"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "shortcodes-demo",
+    "title": "Shortcodes Demo",
+    "url": "/mono/shortcodes-demo.html",
+    "date": "2024-12-01",
+    "excerpt": "Shortcodes Demo This post demonstrates all built-in shortcodes. YouTube Embed Here is an embedded YouTube video: Alerts Callouts",
+    "tags": [
+      "shortcodes",
+      "demo"
+    ],
+    "categories": [
+      "features"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "showcase",
+    "title": "The Mono-One Chronicle: A Complete Visual Reference",
+    "url": "/mono/showcase.html",
+    "date": "2026-03-09",
+    "excerpt": "The Mono-One Chronicle This page exists as a single artifact: every element, component, and typographic pattern the Mono-One theme and Monadic engine are capable of rendering — demonstrated in...",
+    "tags": [
+      "design",
+      "typography",
+      "mono-one",
+      "showcase"
+    ],
+    "categories": [
+      "Design"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "storybook",
+    "title": "Monadic Storybook - UI Element Test Page",
+    "url": "/mono/storybook.html",
+    "date": "2024-01-01",
+    "excerpt": "Monadic Storybook This page tests all supported UI elements and features in Monadic to ensure consistent rendering. Table of Contents Typography Code Blocks Lists Tables Links Blockquotes Horizontal...",
+    "tags": [
+      "storybook",
+      "testing",
+      "ui",
+      "baseline"
+    ],
+    "categories": [
+      "testing"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "welcome",
+    "title": "Welcome to the E2E Test Blog",
+    "url": "/mono/welcome.html",
+    "date": "2024-01-15",
+    "excerpt": "Welcome to the E2E Test Blog This blog is used for end-to-end testing of the Mono-One theme. Purpose We test the following features: Copy button positioning Line numbers display Dark mode toggle...",
+    "tags": [
+      "testing",
+      "demo"
+    ],
+    "categories": [
+      "announcements"
+    ],
+    "folder": "posts",
+    "folderTitle": "Posts"
+  },
+  {
+    "id": "year-review",
+    "title": "2023 Year in Review",
+    "url": "/mono/year-review.html",
+    "date": "2023-12-31",
+    "excerpt": "2023 Year in Review Looking back at the achievements and lessons from 2023. Highlights Launched new projects Learned new technologies Traveled to new places This post is in the blog/2023 folder.",
+    "tags": [
+      "review",
+      "retrospective"
+    ],
+    "categories": [
+      "Personal"
+    ],
+    "folder": "blog",
+    "folderTitle": "Blog"
+  },
+  {
+    "id": "work-life-balance",
+    "title": "Finding Work-Life Balance",
+    "url": "/mono/work-life-balance.html",
+    "date": "2024-10-24",
+    "excerpt": "Finding Work-Life Balance Reflections on maintaining a healthy work-life balance in tech. Key Principles Set boundaries Prioritize health Make time for hobbies Disconnect regularly This post is in...",
+    "tags": [
+      "life",
+      "balance",
+      "productivity"
+    ],
+    "categories": [
+      "Personal"
+    ],
+    "folder": "blog",
+    "folderTitle": "Blog"
+  },
+  {
+    "id": "ai-trends",
+    "title": "AI Trends in 2024",
+    "url": "/mono/ai-trends.html",
+    "date": "2024-10-26",
+    "excerpt": "AI Trends in 2024 This post discusses the latest trends in artificial intelligence and machine learning. Key Developments Large Language Models Multimodal AI AI Safety and Alignment This is a sample...",
+    "tags": [
+      "ai",
+      "technology",
+      "trends"
+    ],
+    "categories": [
+      "Tech"
+    ],
+    "folder": "blog",
+    "folderTitle": "Blog"
+  },
+  {
+    "id": "web-performance",
+    "title": "Optimizing Web Performance",
+    "url": "/mono/web-performance.html",
+    "date": "2024-10-25",
+    "excerpt": "Optimizing Web Performance Learn how to make your websites faster and more responsive. Performance Tips Minimize bundle size Use lazy loading Optimize images Leverage caching This post is in the...",
+    "tags": [
+      "web",
+      "performance",
+      "optimization"
+    ],
+    "categories": [
+      "Tech",
+      "Web Development"
+    ],
+    "folder": "blog",
+    "folderTitle": "Blog"
+  },
+  {
+    "id": "flutter-intro",
+    "title": "Introduction to Flutter",
+    "url": "/mono/flutter-intro.html",
+    "date": "2024-10-22",
+    "excerpt": "Introduction to Flutter Get started with Flutter for cross-platform mobile development. What is Flutter? Flutter is Google's UI toolkit for building natively compiled applications for mobile, web,...",
+    "tags": [
+      "flutter",
+      "mobile",
+      "dart",
+      "tutorial"
+    ],
+    "categories": [
+      "Tutorials",
+      "Mobile Development"
+    ],
+    "folder": "tutorials",
+    "folderTitle": "Tutorials"
+  },
+  {
+    "id": "css-styling",
+    "title": "CSS Styling Fundamentals",
+    "url": "/mono/css-styling.html",
+    "date": "2024-10-21",
+    "excerpt": "CSS Styling Fundamentals Master the basics of CSS for beautiful web pages. What is CSS? CSS (Cascading Style Sheets) controls the visual presentation of HTML elements. Basic Syntax This tutorial is...",
+    "tags": [
+      "css",
+      "web",
+      "styling",
+      "tutorial"
+    ],
+    "categories": [
+      "Tutorials",
+      "Web Development"
+    ],
+    "folder": "tutorials",
+    "folderTitle": "Tutorials"
+  },
+  {
+    "id": "html-basics",
+    "title": "HTML Basics - Getting Started",
+    "url": "/mono/html-basics.html",
+    "date": "2024-10-20",
+    "excerpt": "HTML Basics Learn the fundamentals of HTML for web development. What is HTML? HTML (HyperText Markup Language) is the standard markup language for creating web pages. Basic Structure This tutorial is...",
+    "tags": [
+      "html",
+      "web",
+      "tutorial"
+    ],
+    "categories": [
+      "Tutorials",
+      "Web Development"
+    ],
+    "folder": "tutorials",
+    "folderTitle": "Tutorials"
+  },
+  {
+    "id": "quick-tip-git",
+    "title": "Quick Tip: Git Aliases",
+    "url": "/mono/quick-tip-git.html",
+    "date": "2024-10-23",
+    "excerpt": "Quick Tip: Git Aliases Useful Git aliases to boost your productivity. This note is in the notes folder.",
+    "tags": [
+      "git",
+      "tips",
+      "productivity"
+    ],
+    "categories": [
+      "Notes"
+    ],
+    "folder": "notes",
+    "folderTitle": "Notes"
+  },
+  {
+    "id": "reading-list",
+    "title": "My Reading List",
+    "url": "/mono/reading-list.html",
+    "date": "2024-10-15",
+    "excerpt": "My Reading List Books I'm currently reading or want to read: Technical Books Clean Code by Robert C. Martin Designing Data-Intensive Applications The Pragmatic Programmer Non-Technical Atomic Habits...",
+    "tags": [
+      "books",
+      "reading"
+    ],
+    "categories": [
+      "Notes"
+    ],
+    "folder": "notes",
+    "folderTitle": "Notes"
+  },
+  {
+    "id": "monadic",
+    "title": "Monadic",
+    "url": "/mono/projects/monadic.html",
+    "date": "2024-06-15",
+    "excerpt": "Monadic Monadic is a VS Code extension that makes it easy to create and manage blogs using markdown files. It supports GitHub Pages publishing, custom themes, and a rich set of features. Features...",
+    "tags": [],
+    "categories": [],
+    "folder": "projects",
+    "folderTitle": "Projects"
+  },
+  {
+    "id": "demo-theme",
+    "title": "Demo Theme",
+    "url": "/mono/projects/demo-theme.html",
+    "date": "2024-03-10",
+    "excerpt": "Demo Theme A sample theme built for the Monadic blogging platform. This theme demonstrates the theme system capabilities including dark mode, custom fonts, and responsive layouts. Design Goals Clean,...",
+    "tags": [],
+    "categories": [],
+    "folder": "projects",
+    "folderTitle": "Projects"
+  }
+]

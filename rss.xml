@@ -1,0 +1,1750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[Monadic E2E Test Blog]]></title>
+    <link>https://shashankshekhar.net/mono/</link>
+    <description><![CDATA[A demo blog for testing Monadic themes and features]]></description>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Mar 2026 02:21:24 GMT</lastBuildDate>
+    <atom:link href="https://shashankshekhar.net/mono//rss.xml" rel="self" type="application/rss+xml" />
+    <copyright><![CDATA[All rights reserved 2026, Test Author]]></copyright>
+    <item>
+      <title><![CDATA[The Mono-One Chronicle: A Complete Visual Reference]]></title>
+      <link>https://shashankshekhar.net/mono//showcase.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//showcase.html</guid>
+      <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[An exhaustive visual tour of the Mono-One theme — every typographic element, component, and feature demonstrated in full. Use this page to evaluate the theme at a glance.]]></description>
+      <content:encoded><![CDATA[# The Mono-One Chronicle
+
+This page exists as a single artifact: every element, component, and typographic pattern the Mono-One theme and Monadic engine are capable of rendering — demonstrated in context, not isolation. Think of it as a live design system document.
+
+Mono-One is built on three typographic families: **Plus Jakarta Sans** for display and headings, **Source Sans 3** for body reading, and **JetBrains Mono** for code, metadata, and anything that benefits from a fixed-width rhythm. The palette is anchored by a fresh emerald `#059669`, dark slate backgrounds in dark mode, and near-white surfaces in light mode.
+
+***
+
+## Typography
+
+A typographic scale exists to communicate hierarchy. Every level should earn its size. Here is the full heading scale rendered in sequence, so you can evaluate the contrast between levels at a glance.
+
+## Heading Level Two
+
+The h2 sits at `1.875rem` — large enough to section a long post, small enough to feel subordinate to the page title above. It should anchor a major topic shift.
+
+### Heading Level Three
+
+At `1.5rem`, the h3 opens a sub-topic within a section. It reads as a confident aside rather than a competing headline.
+
+#### Heading Level Four
+
+The h4 at `1.25rem` is the last level that reads as a true heading. Use it sparingly for sub-sub-sections where structure demands it.
+
+##### Heading Level Five
+
+At `1.125rem` the h5 is barely larger than body text. It works as a label or a pull-quote title, not a section opener.
+
+###### Heading Level Six
+
+The h6 sits flush with body size. It exists for completeness and for edge cases — reference lists, footnote headers, API documentation.
+
+***
+
+## Prose & Inline Formatting
+
+Good body text is invisible. The reader should feel the *ideas*, not the typography. Source Sans 3 at 16px with `line-height: 1.75` achieves this — generous enough to avoid crowding on long lines, tight enough to feel intentional at the 680px content width.
+
+Inline emphasis: **bold text** signals importance. *Italic text* signals nuance, title, or foreign term. ***Bold and italic together*** signals urgency. ~~Strikethrough~~ communicates deletion or retraction. `inline code` isolates technical terms from prose — a function name like `parsePostContent()` should never dissolve into a sentence.
+
+Keyboard shortcuts are rendered with styled `<kbd>` elements. Press <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the command palette. Press <kbd>Cmd</kbd> + <kbd>S</kbd> to save. These look distinct from inline code and communicate "physical key" rather than "code string."
+
+Emoji are supported natively: 🎨 Design, 🔧 Engineering, 📖 Writing, ✨ Polish. No special processing needed — Unicode just works.
+
+> Typography is the craft of endowing human language with a durable visual form, and thus with an independent existence.
+>
+> — Robert Bringhurst, *The Elements of Typographic Style*
+
+Blockquotes use the emerald accent border and a subtle tinted background. They step back visually — secondary to the narrative but distinct from it.
+
+### Nested Blockquotes
+
+Blockquotes can nest to show dialogue or layered quotation:
+
+> This is the outer blockquote — a primary source.
+>
+> > This is an inner blockquote — something the primary source is itself quoting. The nesting should be visually clear without becoming cluttered.
+>
+> Back at the outer level. The indentation communicates the return.
+
+***
+
+## Alerts
+
+Alerts are block-level shortcodes that communicate status. They're designed to interrupt the reading flow *intentionally* — a strong signal that demands attention before the reader continues.
+
+{% alert info %}
+**Info:** This is an informational alert. Use it for context that enhances understanding but isn't critical — background notes, related reading, helpful links.
+{% endalert %}
+
+{% alert tip %}
+**Tip:** Pro tips live here. This is actionable, useful, and specific. The green-tinted background echoes the site's primary emerald accent, making it feel native to the theme.
+{% endalert %}
+
+{% alert warning %}
+**Warning:** Caution is warranted. The amber treatment signals "proceed, but carefully." Use this for deprecations, caveats, or configuration traps.
+{% endalert %}
+
+{% alert error %}
+**Error:** Something is wrong and the reader must address it before continuing. Reserve this for genuine blockers — broken dependencies, invalid config, data loss scenarios.
+{% endalert %}
+
+{% alert success %}
+**Success:** Confirmation that something worked. Use at the end of a tutorial or after a multi-step process to signal completion.
+{% endalert %}
+
+***
+
+## Callouts
+
+Callouts are the softer cousin of alerts. They carry the same types but render with an icon prefix and a border rather than a solid accent bar — lower interrupt priority, higher readability for longer content.
+
+{% callout info %}
+**Note:** Callouts work well for inline asides in long-form documentation. They don't shout; they annotate. Use them when the content is genuinely supplementary — worth reading, but not worth stopping for.
+{% endcallout %}
+
+{% callout tip %}
+**Pro Tip:** You can nest lists, code, and even brief paragraphs inside a callout. The `{% callout %}` shortcode renders its body as full Markdown, so formatting works as expected.
+{% endcallout %}
+
+{% callout warning %}
+**Heads Up:** The `shortcodes.enabled` flag in `monadic.json` must be `true` for shortcodes to render. Without it, the raw tag syntax will appear in the output instead of the component.
+{% endcallout %}
+
+{% callout error %}
+**Breaking Change:** This callout type communicates breaking API changes, deprecated interfaces, or configuration that no longer works. Pair it with a code block showing the before/after.
+{% endcallout %}
+
+{% callout success %}
+**Done:** Task confirmed. This callout works well at the end of a step in a multi-part tutorial, confirming the reader is on track before moving to the next step.
+{% endcallout %}
+
+***
+
+## Code & Syntax Highlighting
+
+Code blocks use the `vs2015` syntax theme — dark background, always, regardless of the page's light/dark mode. This gives code a "terminal" quality that is distinct from prose and immediately recognizable. Line numbers and a copy button appear on hover.
+
+### TypeScript
+
+```typescript
+// A typed service pattern used throughout Monadic
+interface Post {
+  slug: string;
+  title: string;
+  date: Date;
+  tags: string[];
+  readingTime: number;
+  excerpt: string;
+}
+
+async function buildPost(filePath: string): Promise<Post> {
+  const raw = await Bun.file(filePath).text();
+  const { frontmatter, content } = parseFrontmatter(raw);
+
+  return {
+    slug: slugify(frontmatter.title),
+    title: frontmatter.title,
+    date: new Date(frontmatter.date),
+    tags: frontmatter.tags ?? [],
+    readingTime: estimateReadingTime(content),
+    excerpt: generateExcerpt(content, 200),
+  };
+}
+```
+
+### CSS
+
+```css
+/* Mono-One's emerald accent system */
+:root {
+  --color-primary: #059669;
+  --color-primary-hover: #047857;
+  --color-accent-dim: rgba(5, 150, 105, 0.08);
+  --color-accent-muted: rgba(5, 150, 105, 0.2);
+}
+
+/* Bold typographic scale — 3x body size for h1 */
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+/* Post preview numbered list marker */
+.post-preview::before {
+  content: counter(post-counter, decimal-leading-zero);
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  opacity: 0.35;
+}
+```
+
+### Bash
+
+```bash
+#!/usr/bin/env bash
+
+# Build, test, and serve the demo blog
+set -e
+
+echo "→ Building extension..."
+bun run build:dev
+
+echo "→ Building demo blog..."
+node --require ./tests/mocks/vscode-register.js \
+  out/e2e-scripts/build-demo-blog.js
+
+echo "→ Starting dev server at http://localhost:4949"
+node tests/scripts/serve-demo-blog.js
+```
+
+### JSON
+
+```json
+{
+  "site": {
+    "title": "My Blog",
+    "description": "Writing about code, design, and everything between.",
+    "author": "Jane Doe",
+    "url": "https://janedoe.com"
+  },
+  "theme": {
+    "engine": "liquid",
+    "syntaxTheme": "vs2015",
+    "showLineNumbers": true,
+    "showCopyButton": true
+  },
+  "features": {
+    "rss": true,
+    "shortcodes": { "enabled": true },
+    "images": { "enabled": true }
+  }
+}
+```
+
+### SQL
+
+```sql
+-- Posts with tag counts, ordered by engagement
+SELECT
+  p.slug,
+  p.title,
+  p.date,
+  COUNT(DISTINCT pt.tag_id) AS tag_count,
+  COUNT(DISTINCT r.id)      AS related_count
+FROM posts p
+LEFT JOIN post_tags pt ON pt.post_id = p.id
+LEFT JOIN related_posts r ON r.source_id = p.id
+WHERE p.draft = false
+  AND p.date <= CURRENT_DATE
+GROUP BY p.id
+ORDER BY p.date DESC
+LIMIT 20;
+```
+
+***
+
+## Lists
+
+### Unordered — the Monadic feature set
+
+* **Markdown rendering** — full GFM with remark/rehype
+* **Liquid templating** — Jekyll-compatible with smart caching
+* **Theme system** — multi-layout Liquid themes with hot reload
+* **Asset pipeline** — Sass compilation, JS bundling, minification
+* **Series support** — ordered multi-post narratives with navigation
+* **Related posts** — automatic, tag-similarity based
+  * Configurable result count
+  * Opt-out per post via frontmatter
+* **Table of contents** — auto-generated from headings
+* **Shortcodes** — YouTube, alerts, callouts, extensible
+* **Search** — client-side with Fuse.js, no server required
+* **Pagination** — configurable posts per page
+* **i18n** — locale detection, language switcher, fallback chains
+* **RSS** — auto-generated feed
+* **Sitemap** — XML sitemap with priority and change frequency
+
+### Ordered — a publishing workflow
+
+1. Write a Markdown post with TOML frontmatter
+2. Add it to the appropriate content folder
+3. Run `bun run demo:build` to compile
+4. Review at `http://localhost:4949`
+5. Commit and push
+6. GitHub Actions builds and deploys to GitHub Pages
+
+### Task list — theme features completed
+
+* [x] Bold typographic scale (3× body ratio)
+* [x] Dark mode with CSS variables
+* [x] Syntax highlighting (vs2015, always-dark)
+* [x] Post preview numbered list (decimal-leading-zero)
+* [x] Series navigation widget
+* [x] Related posts widget
+* [x] TOC with progressive disclosure
+* [x] Image captions via italic-after-image
+* [x] Image carousels via HTML comment markers
+* [x] YouTube auto-embed and shortcode
+* [x] All five alert types
+* [x] All five callout types
+* [ ] Custom shortcode registration (user-defined)
+* [ ] Video thumbnail previews before embed
+
+***
+
+## Tables
+
+Tables render with a clean zebra-stripe pattern, monospace headers, and a subtle border. They're designed for data that requires precise comparison — not for layout.
+
+### Feature comparison
+
+| Feature            | Monadic | Jekyll | Hugo | Eleventy |
+| ------------------ | :-----: | :----: | :--: | :------: |
+| TOML frontmatter   |    ✓    |    ✓   |   ✓  |     —    |
+| Liquid templates   |    ✓    |    ✓   |   —  |     ✓    |
+| Built-in themes    |    ✓    |    —   |   ✓  |     —    |
+| VS Code extension  |    ✓    |    —   |   —  |     —    |
+| Shortcodes         |    ✓    |    —   |   ✓  |     ✓    |
+| Series support     |    ✓    |    —   |   ✓  |     —    |
+| Client-side search |    ✓    |    —   |   ✓  |     —    |
+| i18n               |    ✓    |    —   |   ✓  |     ✓    |
+
+### Typography scale reference
+
+| Token              | Value      | px | Usage                  |
+| ------------------ | ---------- | -- | ---------------------- |
+| `--font-size-xs`   | `0.75rem`  | 12 | Labels, badges, meta   |
+| `--font-size-sm`   | `0.875rem` | 14 | Nav, secondary text    |
+| `--font-size-base` | `1rem`     | 16 | Body copy              |
+| `--font-size-lg`   | `1.125rem` | 18 | h5                     |
+| `--font-size-xl`   | `1.25rem`  | 20 | h4                     |
+| `--font-size-2xl`  | `1.5rem`   | 24 | h3                     |
+| `--font-size-3xl`  | `1.875rem` | 30 | h2                     |
+| `h1`               | `3rem`     | 48 | Site title, post title |
+
+***
+
+## Images
+
+Images are responsive by default — `max-width: 100%`, rounded corners, generous vertical margin. Add a caption by following the image with an italicized line.
+
+![A vivid landscape of mountains and clouds](https://picsum.photos/800/450?random=10)
+*Mountain ridgeline at dawn — the light quality that typographic restraint aspires to.*
+
+A second image at a different proportion:
+
+![An abstract architectural detail](https://picsum.photos/800/350?random=20)
+*Geometric repetition in architecture mirrors a well-structured type scale.*
+
+***
+
+## Image Carousel
+
+Carousels group related images into a single interactive widget. Wrap images in `<!-- carousel -->` and `<!-- /carousel -->` HTML comments. Supports arrow keys, click navigation, touch swipe, and keyboard accessibility.
+
+<!-- carousel -->
+
+![Slide 1: Typography specimen](https://picsum.photos/800/480?random=31)
+*Specimen one — the emerald accent against dark slate in dark mode*
+
+![Slide 2: Code block detail](https://picsum.photos/800/480?random=32)
+*Specimen two — the always-dark code block terminal aesthetic*
+
+![Slide 3: Post list view](https://picsum.photos/800/480?random=33)
+*Specimen three — the numbered post preview list with decimal-leading-zero counters*
+
+![Slide 4: Mobile layout](https://picsum.photos/800/480?random=34)
+*Specimen four — the responsive mobile layout, compact but still typographically bold*
+
+<!-- /carousel -->
+
+***
+
+## Video Embeds
+
+YouTube links placed alone on a line are automatically converted to embedded players. No shortcode required — just paste the URL.
+
+[The philosophy behind bold typographic design](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+Or use the shortcode for explicit control:
+
+{% youtube "dQw4w9WgXcQ" %}
+
+Both produce the same responsive 16:9 embed with a rounded border.
+
+***
+
+## Horizontal Rules
+
+Three consecutive dashes render as the theme's geometric diamond divider — three rotated squares in the primary emerald color.
+
+***
+
+The divider above is rendered from `---`. It's deliberately subtle: enough to signal a section break without competing with headings.
+
+***
+
+## Footnotes
+
+Footnotes[^mono] are rendered at the bottom of the page and linked with superscript numbers. They're ideal for citations, tangential notes, and asides that would disrupt prose flow if inline.
+
+A second footnote[^liquid] demonstrates multiple entries. The footnote list appears automatically at the close of the document.
+
+[^mono]: Mono-One takes its name from "monadic" — the functional programming concept of a computation context that chains operations. The theme applies this as a metaphor for composable design: every element is a unit that composes cleanly with every other.
+
+[^liquid]: Liquid is a templating language created by Shopify and popularized by Jekyll. Monadic uses LiquidJS with Jekyll-compatible filters, making themes portable across both platforms.
+
+***
+
+## Links
+
+Links use the emerald primary color with a subtle animated underline on hover. The underline offset and color are both set via CSS — `text-underline-offset: 2px` and `text-decoration-color: var(--color-accent-muted)`.
+
+* [Monadic documentation](https://monadic.app) — the official site
+* [LiquidJS](https://liquidjs.com) — the templating engine
+* [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) — the display typeface
+* [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3) — the reading typeface
+* [JetBrains Mono](https://www.jetbrains.com/lp/mono/) — the monospace typeface
+
+Reference-style links[^ref] are also supported — useful for repeated URLs or URLs that would break prose flow if inline.
+
+[GFM]: https://github.github.com/gfm/
+
+[^ref]: Reference-style links keep the Markdown source readable when the URL is long or used multiple times.
+
+***
+
+## End of Chronicle
+
+This page renders every feature the Mono-One theme and Monadic engine support as of March 2026. Rebuild it after any theme change to see the effect across the full component surface in a single page view.
+
+The storybook pattern — a dedicated page that exercises every design system element — is borrowed from frontend component libraries. In the context of a Liquid-templated blog, it serves the same purpose: a living visual regression baseline that makes unintended changes immediately visible.
+]]></content:encoded>
+      <author><![CDATA[Monadic Team]]></author>
+    </item>
+    <item>
+      <title><![CDATA[पहली संचालित उड़ान]]></title>
+      <link>https://shashankshekhar.net/mono//hi/first-flight.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//hi/first-flight.html</guid>
+      <pubDate>Tue, 17 Dec 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[17 दिसंबर, 1903 को ऑरविल और विल्बर राइट ने वह हासिल किया जिसकी सदियों से कल्पना की जा रही थी: निरंतर, नियंत्रित, संचालित उड़ान। किटी हॉक, उत्तरी कैरोलिना के पास किल डेविल हिल्स में, उनके नाजुक लकड़ी...]]></description>
+      <content:encoded><![CDATA[17 दिसंबर, 1903 को ऑरविल और विल्बर राइट ने वह हासिल किया जिसकी सदियों से कल्पना की जा रही थी: निरंतर, नियंत्रित, संचालित उड़ान। किटी हॉक, उत्तरी कैरोलिना के पास किल डेविल हिल्स में, उनके नाजुक लकड़ी और कपड़े से बने बाइप्लेन, राइट फ्लायर, ने रेतीली जमीन से उड़ान भरी और बारह सेकंड तक हवा में रहा, 120 फीट की दूरी तय करते हुए।
+
+दोनों भाई डेटन, ओहायो के साइकिल मैकेनिक थे, जिनके पास कोई औपचारिक इंजीनियरिंग डिग्री नहीं थी। जो बात उन्हें अलग करती थी वह उनका व्यवस्थित दृष्टिकोण था। उन्होंने पंखों के आकार का परीक्षण करने के लिए एक पवन सुरंग बनाई, तीन-अक्ष नियंत्रण प्रणाली का आविष्कार किया जो आज भी विमान डिजाइन का मूल आधार है, और जब कोई निर्माता उनकी आवश्यकताओं को पूरा नहीं कर सका तो उन्होंने अपना हल्का गैसोलीन इंजन खुद डिजाइन किया।
+
+उस पहले दिन चार उड़ानें हुईं। सबसे लंबी उड़ान, जिसे विल्बर ने उड़ाया, 59 सेकंड तक चली और 852 फीट की दूरी तय की। इसके तुरंत बाद हवा के तेज झोंके ने फ्लायर को नष्ट कर दिया, लेकिन इससे कोई फर्क नहीं पड़ता था। विमानन का युग शुरू हो चुका था।
+
+उनकी उपलब्धि ने सभ्यता को बदल दिया। एक जीवनकाल के भीतर, मनुष्य चंद्रमा पर चले। राइट बंधुओं ने साबित किया कि सावधान अवलोकन, निरंतर प्रयोग, और दृढ़ संकल्प से जो असंभव लगता था उसे भी पार किया जा सकता है।
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[The First Powered Flight]]></title>
+      <link>https://shashankshekhar.net/mono//first-flight.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//first-flight.html</guid>
+      <pubDate>Tue, 17 Dec 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[On December 17, 1903, Orville and Wilbur Wright achieved what centuries of dreamers had imagined: sustained, controlled, powered flight. At Kill Devil Hills near Kitty Hawk, North Carolina, their...]]></description>
+      <content:encoded><![CDATA[On December 17, 1903, Orville and Wilbur Wright achieved what centuries of dreamers had imagined: sustained, controlled, powered flight. At Kill Devil Hills near Kitty Hawk, North Carolina, their fragile wood-and-fabric biplane, the Wright Flyer, lifted off the sandy ground and stayed airborne for twelve seconds, covering 120 feet.
+
+The brothers were bicycle mechanics from Dayton, Ohio, with no formal engineering degrees. What set them apart was their methodical approach. They built a wind tunnel to test wing shapes, invented a three-axis control system that remains fundamental to aircraft design today, and designed their own lightweight gasoline engine when no manufacturer could meet their specifications.
+
+That first day saw four flights. The longest, piloted by Wilbur, lasted 59 seconds and covered 852 feet. A gust of wind destroyed the Flyer shortly after, but it hardly mattered. The age of aviation had begun.
+
+Their achievement transformed civilization. Within a lifetime, humans walked on the moon. The Wright brothers proved that careful observation, persistent experimentation, and sheer determination could overcome what once seemed impossible.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Image Optimization Test]]></title>
+      <link>https://shashankshekhar.net/mono//image-test.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//image-test.html</guid>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Image Optimization Test This post tests image optimization attributes. Local Image (Hero) External Image Another External Image]]></description>
+      <content:encoded><![CDATA[# Image Optimization Test
+
+This post tests image optimization attributes.
+
+## Local Image (Hero)
+
+![Test Photo](assets/images/test-photo.png)
+
+## External Image
+
+![External Photo](https://dummyimage.com/300x200)
+
+## Another External Image
+
+![Another External](https://dummyimage.com/150x100)
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Shortcodes Demo]]></title>
+      <link>https://shashankshekhar.net/mono//shortcodes-demo.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//shortcodes-demo.html</guid>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Shortcodes Demo This post demonstrates all built-in shortcodes. YouTube Embed Here is an embedded YouTube video: Alerts Callouts]]></description>
+      <content:encoded><![CDATA[# Shortcodes Demo
+
+This post demonstrates all built-in shortcodes.
+
+## YouTube Embed
+
+Here is an embedded YouTube video:
+
+{% youtube "dQw4w9WgXcQ" %}
+
+## Alerts
+
+{% alert info %}
+This is an info alert. It provides helpful information.
+{% endalert %}
+
+{% alert warning %}
+This is a warning alert. Proceed with caution.
+{% endalert %}
+
+{% alert error %}
+This is an error alert. Something went wrong.
+{% endalert %}
+
+{% alert success %}
+This is a success alert. Operation completed successfully.
+{% endalert %}
+
+{% alert tip %}
+This is a tip alert. Here is a useful suggestion.
+{% endalert %}
+
+## Callouts
+
+{% callout info %}
+This is an info callout with an icon prefix.
+{% endcallout %}
+
+{% callout tip %}
+Pro tip: You can use shortcodes to add rich content widgets to your posts!
+{% endcallout %}
+
+{% callout warning %}
+Be careful with this feature — it requires shortcodes.enabled: true in your config.
+{% endcallout %}
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Media Features Demo]]></title>
+      <link>https://shashankshekhar.net/mono//media-features-demo.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//media-features-demo.html</guid>
+      <pubDate>Tue, 12 Nov 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Media Features Demo This post demonstrates the new media features: video embeds, image captions, and image carousels. Video Embeds Simply paste a YouTube URL on its own line and it will automatically...]]></description>
+      <content:encoded><![CDATA[# Media Features Demo
+
+This post demonstrates the new media features: video embeds, image captions, and image carousels.
+
+## Video Embeds
+
+Simply paste a YouTube URL on its own line and it will automatically be embedded:
+
+[YouTube Tutorial](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+You can add a caption by using the link text:
+
+[An amazing video tutorial](https://youtu.be/dQw4w9WgXcQ)
+
+## Images with Captions
+
+Add a caption to an image by following it with emphasized text:
+
+![Beautiful landscape](https://picsum.photos/800/600?random=1)
+*This is a beautiful landscape photo with a caption below it*
+
+The caption can be on the same line or the next line:
+
+![City skyline](https://picsum.photos/800/600?random=2)
+
+*A stunning city skyline at sunset*
+
+## Image Carousels
+
+Create an image carousel using HTML comments as markers:
+
+<!-- carousel -->
+
+![Slide 1](https://picsum.photos/800/600?random=3)
+*First slide with caption*
+
+![Slide 2](https://picsum.photos/800/600?random=4)
+*Second slide with a different image*
+
+![Slide 3](https://picsum.photos/800/600?random=5)
+*Third and final slide*
+
+<!-- /carousel -->
+
+The carousel supports:
+
+* Arrow key navigation
+* Click/touch navigation
+* Swipe gestures on mobile
+* Keyboard accessibility
+* Responsive design
+
+## Mixed Content
+
+You can mix media types in the same post:
+
+![Another image](https://picsum.photos/600/400?random=6)
+*A smaller image with caption*
+
+And embed another video:
+
+[Learn More](https://www.youtube.com/watch?v=jNQXAC9IVRw)
+
+That's it! All media is responsive and accessible.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[AI Trends in 2024]]></title>
+      <link>https://shashankshekhar.net/mono//ai-trends.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//ai-trends.html</guid>
+      <pubDate>Sat, 26 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[AI Trends in 2024 This post discusses the latest trends in artificial intelligence and machine learning. Key Developments Large Language Models Multimodal AI AI Safety and Alignment This is a sample...]]></description>
+      <content:encoded><![CDATA[# AI Trends in 2024
+
+This post discusses the latest trends in artificial intelligence and machine learning.
+
+## Key Developments
+
+* Large Language Models
+* Multimodal AI
+* AI Safety and Alignment
+
+This is a sample post in the **blog/2024/tech** folder.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Optimizing Web Performance]]></title>
+      <link>https://shashankshekhar.net/mono//web-performance.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//web-performance.html</guid>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Optimizing Web Performance Learn how to make your websites faster and more responsive. Performance Tips Minimize bundle size Use lazy loading Optimize images Leverage caching This post is in the...]]></description>
+      <content:encoded><![CDATA[# Optimizing Web Performance
+
+Learn how to make your websites faster and more responsive.
+
+## Performance Tips
+
+1. Minimize bundle size
+2. Use lazy loading
+3. Optimize images
+4. Leverage caching
+
+This post is in the **blog/2024/tech** folder.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Finding Work-Life Balance]]></title>
+      <link>https://shashankshekhar.net/mono//work-life-balance.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//work-life-balance.html</guid>
+      <pubDate>Thu, 24 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Finding Work-Life Balance Reflections on maintaining a healthy work-life balance in tech. Key Principles Set boundaries Prioritize health Make time for hobbies Disconnect regularly This post is in...]]></description>
+      <content:encoded><![CDATA[# Finding Work-Life Balance
+
+Reflections on maintaining a healthy work-life balance in tech.
+
+## Key Principles
+
+* Set boundaries
+* Prioritize health
+* Make time for hobbies
+* Disconnect regularly
+
+This post is in the **blog/2024/personal** folder.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Quick Tip: Git Aliases]]></title>
+      <link>https://shashankshekhar.net/mono//quick-tip-git.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//quick-tip-git.html</guid>
+      <pubDate>Wed, 23 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Quick Tip: Git Aliases Useful Git aliases to boost your productivity. This note is in the notes folder.]]></description>
+      <content:encoded><![CDATA[# Quick Tip: Git Aliases
+
+Useful Git aliases to boost your productivity.
+
+```bash
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.st status
+git config --global alias.cm "commit -m"
+```
+
+This note is in the **notes** folder.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Introduction to Flutter]]></title>
+      <link>https://shashankshekhar.net/mono//flutter-intro.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//flutter-intro.html</guid>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Introduction to Flutter Get started with Flutter for cross-platform mobile development. What is Flutter? Flutter is Google's UI toolkit for building natively compiled applications for mobile, web,...]]></description>
+      <content:encoded><![CDATA[# Introduction to Flutter
+
+Get started with Flutter for cross-platform mobile development.
+
+## What is Flutter?
+
+Flutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.
+
+## First App
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+```
+
+This tutorial is in the **tutorials/mobile** folder.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[CSS Styling Fundamentals]]></title>
+      <link>https://shashankshekhar.net/mono//css-styling.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//css-styling.html</guid>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[CSS Styling Fundamentals Master the basics of CSS for beautiful web pages. What is CSS? CSS (Cascading Style Sheets) controls the visual presentation of HTML elements. Basic Syntax This tutorial is...]]></description>
+      <content:encoded><![CDATA[# CSS Styling Fundamentals
+
+Master the basics of CSS for beautiful web pages.
+
+## What is CSS?
+
+CSS (Cascading Style Sheets) controls the visual presentation of HTML elements.
+
+## Basic Syntax
+
+```css
+h1 {
+    color: blue;
+    font-size: 2rem;
+}
+```
+
+This tutorial is in the **tutorials/web** folder.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[HTML Basics - Getting Started]]></title>
+      <link>https://shashankshekhar.net/mono//html-basics.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//html-basics.html</guid>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[HTML Basics Learn the fundamentals of HTML for web development. What is HTML? HTML (HyperText Markup Language) is the standard markup language for creating web pages. Basic Structure This tutorial is...]]></description>
+      <content:encoded><![CDATA[# HTML Basics
+
+Learn the fundamentals of HTML for web development.
+
+## What is HTML?
+
+HTML (HyperText Markup Language) is the standard markup language for creating web pages.
+
+## Basic Structure
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>
+```
+
+This tutorial is in the **tutorials/web** folder.
+]]></content:encoded>
+      <author><![CDATA[Guest Writer]]></author>
+    </item>
+    <item>
+      <title><![CDATA[My Reading List]]></title>
+      <link>https://shashankshekhar.net/mono//reading-list.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//reading-list.html</guid>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[My Reading List Books I'm currently reading or want to read: Technical Books Clean Code by Robert C. Martin Designing Data-Intensive Applications The Pragmatic Programmer Non-Technical Atomic Habits...]]></description>
+      <content:encoded><![CDATA[# My Reading List
+
+Books I'm currently reading or want to read:
+
+## Technical Books
+
+* Clean Code by Robert C. Martin
+* Designing Data-Intensive Applications
+* The Pragmatic Programmer
+
+## Non-Technical
+
+* Atomic Habits
+* Deep Work
+* The Lean Startup
+
+This note is in the **notes** folder.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Advanced TypeScript Features - Part 3]]></title>
+      <link>https://shashankshekhar.net/mono//series-part-3.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//series-part-3.html</guid>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Advanced TypeScript Features Welcome to the final part of our TypeScript Fundamentals series! Let's explore some advanced features. Generics Generics allow you to create reusable components that work...]]></description>
+      <content:encoded><![CDATA[# Advanced TypeScript Features
+
+Welcome to the final part of our TypeScript Fundamentals series! Let's explore some advanced features.
+
+## Generics
+
+Generics allow you to create reusable components that work with multiple types:
+
+```typescript
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let output1 = identity<string>("hello");
+let output2 = identity<number>(42);
+
+// Generic interfaces
+interface Box<T> {
+  value: T;
+}
+
+let stringBox: Box<string> = { value: "hello" };
+let numberBox: Box<number> = { value: 42 };
+```
+
+## Utility Types
+
+TypeScript provides several utility types:
+
+```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+// Partial - makes all properties optional
+type PartialUser = Partial<User>;
+
+// Pick - selects specific properties
+type UserPreview = Pick<User, "id" | "name">;
+
+// Omit - removes specific properties
+type UserWithoutEmail = Omit<User, "email">;
+
+// Readonly - makes all properties readonly
+type ReadonlyUser = Readonly<User>;
+```
+
+## Decorators
+
+Decorators provide a way to add annotations and meta-programming syntax:
+
+```typescript
+function log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  const originalMethod = descriptor.value;
+
+  descriptor.value = function(...args: any[]) {
+    console.log(`Calling ${propertyKey} with`, args);
+    return originalMethod.apply(this, args);
+  };
+}
+
+class Calculator {
+  @log
+  add(a: number, b: number): number {
+    return a + b;
+  }
+}
+```
+
+## Conclusion
+
+Congratulations! You've completed the TypeScript Fundamentals series. You now have a solid foundation to build amazing TypeScript applications.
+
+### Series Summary
+
+* **Part 1**: Introduction and basics
+* **Part 2**: Type system and interfaces
+* **Part 3**: Advanced features (you are here!)
+
+Happy coding with TypeScript! 🎉
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Code Examples for Testing]]></title>
+      <link>https://shashankshekhar.net/mono//code-examples.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//code-examples.html</guid>
+      <pubDate>Tue, 16 Jan 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Code Examples for Testing This post contains various code examples to test copy button positioning and syntax highlighting. JavaScript Example Python Example TypeScript Example Rust Example CSS...]]></description>
+      <content:encoded><![CDATA[# Code Examples for Testing
+
+This post contains various code examples to test copy button positioning and syntax highlighting.
+
+## JavaScript Example
+
+```javascript
+// Array methods
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+const sum = numbers.reduce((acc, n) => acc + n, 0);
+
+console.log('Doubled:', doubled);
+console.log('Sum:', sum);
+```
+
+## Python Example
+
+```python
+def fibonacci(n):
+    """Generate Fibonacci sequence up to n terms."""
+    fib_sequence = []
+    a, b = 0, 1
+
+    for _ in range(n):
+        fib_sequence.append(a)
+        a, b = b, a + b
+
+    return fib_sequence
+
+# Generate first 10 Fibonacci numbers
+result = fibonacci(10)
+print(f"Fibonacci sequence: {result}")
+```
+
+## TypeScript Example
+
+```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+class UserService {
+  private users: Map<number, User> = new Map();
+
+  addUser(user: User): void {
+    this.users.set(user.id, user);
+  }
+
+  getUser(id: number): User | undefined {
+    return this.users.get(id);
+  }
+
+  getAllUsers(): User[] {
+    return Array.from(this.users.values());
+  }
+}
+
+const service = new UserService();
+service.addUser({
+  id: 1,
+  name: "Alice",
+  email: "alice@example.com",
+  role: "admin"
+});
+```
+
+## Rust Example
+
+```rust
+fn main() {
+    let numbers = vec![1, 2, 3, 4, 5];
+
+    let sum: i32 = numbers.iter().sum();
+    let doubled: Vec<i32> = numbers.iter().map(|&x| x * 2).collect();
+
+    println!("Original: {:?}", numbers);
+    println!("Doubled: {:?}", doubled);
+    println!("Sum: {}", sum);
+}
+```
+
+## CSS Example
+
+```css
+.button {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Spacing */
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+
+  /* Appearance */
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+
+  /* Typography */
+  font-size: 1rem;
+  font-weight: 600;
+
+  /* Interaction */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background: #0052a3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+```
+
+## Inline Code
+
+You can also use `inline code` like this: `const x = 42;` within your text.
+
+The copy button should appear on each code block when you hover over it.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[TypeScript Type System - Part 2]]></title>
+      <link>https://shashankshekhar.net/mono//series-part-2.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//series-part-2.html</guid>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[TypeScript Type System In this second part of our series, we'll explore TypeScript's powerful type system. Basic Types TypeScript provides several basic types: Interfaces Interfaces define the shape...]]></description>
+      <content:encoded><![CDATA[# TypeScript Type System
+
+In this second part of our series, we'll explore TypeScript's powerful type system.
+
+## Basic Types
+
+TypeScript provides several basic types:
+
+```typescript
+// Primitives
+let name: string = "Alice";
+let age: number = 30;
+let isStudent: boolean = false;
+
+// Arrays
+let numbers: number[] = [1, 2, 3];
+let names: Array<string> = ["Alice", "Bob"];
+
+// Tuples
+let person: [string, number] = ["Alice", 30];
+```
+
+## Interfaces
+
+Interfaces define the shape of objects:
+
+```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  age?: number; // Optional property
+}
+
+function getUser(id: number): User {
+  return {
+    id: id,
+    name: "Alice",
+    email: "alice@example.com"
+  };
+}
+```
+
+## Type Aliases
+
+Type aliases create a new name for a type:
+
+```typescript
+type ID = string | number;
+type UserRole = "admin" | "user" | "guest";
+
+interface AdminUser {
+  id: ID;
+  role: UserRole;
+  permissions: string[];
+}
+```
+
+## Next Steps
+
+In the final part, we'll cover advanced TypeScript features including generics, decorators, and more!
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Welcome to the E2E Test Blog]]></title>
+      <link>https://shashankshekhar.net/mono//welcome.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//welcome.html</guid>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Welcome to the E2E Test Blog This blog is used for end-to-end testing of the Mono-One theme. Purpose We test the following features: Copy button positioning Line numbers display Dark mode toggle...]]></description>
+      <content:encoded><![CDATA[# Welcome to the E2E Test Blog
+
+This blog is used for end-to-end testing of the Mono-One theme.
+
+## Purpose
+
+We test the following features:
+
+* Copy button positioning
+* Line numbers display
+* Dark mode toggle
+* Syntax highlighting
+* Responsive design
+
+## Simple Code Example
+
+Here's a basic JavaScript function:
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+  return `Greeting sent to ${name}`;
+}
+
+const result = greet("World");
+console.log(result);
+```
+
+## Multiple Code Blocks
+
+First block:
+
+```bash
+npm install
+npm test
+npm run build
+```
+
+Second block:
+
+```json
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
+
+That's it for the welcome post!
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Getting Started with TypeScript - Part 1]]></title>
+      <link>https://shashankshekhar.net/mono//series-part-1.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//series-part-1.html</guid>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Introduction Welcome to the first part of our TypeScript Fundamentals series! In this series, we'll cover everything you need to know to get started with TypeScript. What is TypeScript? TypeScript is...]]></description>
+      <content:encoded><![CDATA[# Introduction
+
+Welcome to the first part of our TypeScript Fundamentals series! In this series, we'll cover everything you need to know to get started with TypeScript.
+
+## What is TypeScript?
+
+TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It adds optional static typing and class-based object-oriented programming to the language.
+
+## Why TypeScript?
+
+* **Type Safety**: Catch errors at compile time
+* **Better IDE Support**: Enhanced autocomplete and refactoring
+* **Modern JavaScript**: Use the latest JavaScript features
+* **Scalability**: Better for large codebases
+
+```typescript
+// Example: Type annotations
+let message: string = "Hello, TypeScript!";
+let count: number = 42;
+let isActive: boolean = true;
+
+function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+```
+
+## Next Steps
+
+In the next part, we'll dive into TypeScript's type system and explore interfaces and types.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+    <item>
+      <title><![CDATA[Monadic Storybook - UI Element Test Page]]></title>
+      <link>https://shashankshekhar.net/mono//storybook.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//storybook.html</guid>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Comprehensive test page for all Monadic UI elements and features]]></description>
+      <content:encoded><![CDATA[# Monadic Storybook
+
+This page tests all supported UI elements and features in Monadic to ensure consistent rendering.
+
+## Table of Contents
+
+* [Typography](#typography)
+* [Code Blocks](#code-blocks)
+* [Lists](#lists)
+* [Tables](#tables)
+* [Links](#links)
+* [Blockquotes](#blockquotes)
+* [Horizontal Rules](#horizontal-rules)
+* [Images](#images)
+* [Inline Formatting](#inline-formatting)
+
+***
+
+## Typography
+
+### Heading Level 1
+
+# This is H1
+
+### Heading Level 2
+
+## This is H2
+
+### Heading Level 3
+
+### This is H3
+
+### Heading Level 4
+
+#### This is H4
+
+### Heading Level 5
+
+##### This is H5
+
+### Heading Level 6
+
+###### This is H6
+
+### Paragraph
+
+This is a normal paragraph with **bold text**, *italic text*, and ***bold italic text***. It should wrap naturally and maintain proper spacing between lines. The quick brown fox jumps over the lazy dog.
+
+This is a second paragraph to test paragraph spacing.
+
+***
+
+## Code Blocks
+
+### Basic Code Block
+
+```
+Plain text code block without syntax highlighting
+Line 2
+Line 3
+```
+
+### JavaScript
+
+```javascript
+// JavaScript example with syntax highlighting
+function greet(name) {
+  const message = `Hello, ${name}!`;
+  console.log(message);
+  return message;
+}
+
+const result = greet("World");
+console.log(result);
+```
+
+### TypeScript
+
+```typescript
+// TypeScript example
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  isActive: boolean;
+}
+
+function getUserById(id: number): User | null {
+  // Mock implementation
+  return {
+    id,
+    name: "John Doe",
+    email: "john@example.com",
+    isActive: true,
+  };
+}
+
+const user = getUserById(1);
+console.log(user?.name);
+```
+
+### Python
+
+```python
+# Python example
+def fibonacci(n):
+    """Calculate the nth Fibonacci number."""
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+# List comprehension
+squares = [x**2 for x in range(10)]
+print(squares)
+
+# Dictionary
+user = {
+    "name": "Alice",
+    "age": 30,
+    "active": True
+}
+```
+
+### HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page</title>
+</head>
+<body>
+  <header>
+    <h1>Hello World</h1>
+  </header>
+  <main>
+    <p>This is a test paragraph.</p>
+  </main>
+</body>
+</html>
+```
+
+### CSS
+
+```css
+/* CSS example */
+:root {
+  --primary-color: #0066cc;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #0052a3;
+}
+```
+
+### JSON
+
+```json
+{
+  "name": "monadic",
+  "version": "1.0.0",
+  "description": "A static site generator",
+  "features": {
+    "markdown": true,
+    "mdx": true,
+    "themes": true,
+    "plugins": ["syntax-highlighting", "series", "tags"]
+  },
+  "config": {
+    "showLineNumbers": true,
+    "showCopyButton": true,
+    "syntaxTheme": "vs2015"
+  }
+}
+```
+
+### Bash
+
+```bash
+#!/bin/bash
+
+# Build and deploy script
+echo "Building project..."
+npm install
+npm run build
+
+# Run tests
+npm test
+
+# Deploy
+if [ $? -eq 0 ]; then
+  echo "Tests passed! Deploying..."
+  npm run deploy
+else
+  echo "Tests failed! Aborting deployment."
+  exit 1
+fi
+```
+
+### SQL
+
+```sql
+-- SQL example
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  is_active BOOLEAN DEFAULT true
+);
+
+-- Insert sample data
+INSERT INTO users (username, email) VALUES
+  ('alice', 'alice@example.com'),
+  ('bob', 'bob@example.com');
+
+-- Query with JOIN
+SELECT u.username, p.title
+FROM users u
+LEFT JOIN posts p ON u.id = p.user_id
+WHERE u.is_active = true
+ORDER BY p.created_at DESC;
+```
+
+***
+
+## Lists
+
+### Unordered Lists
+
+* First item
+* Second item
+* Third item
+  * Nested item 1
+  * Nested item 2
+    * Deeply nested item
+* Fourth item
+
+### Ordered Lists
+
+1. First step
+2. Second step
+3. Third step
+   1. Sub-step A
+   2. Sub-step B
+   3. Sub-step C
+4. Fourth step
+
+### Mixed Lists
+
+1. Numbered item
+   * Bullet sub-item
+   * Another bullet
+     1. Nested number
+     2. Another nested number
+2. Second numbered item
+   * More bullets
+     * Even more nesting
+
+### Task Lists
+
+* [x] Completed task
+* [x] Another completed task
+* [ ] Incomplete task
+* [ ] Another incomplete task
+
+***
+
+## Tables
+
+### Simple Table
+
+| Feature  | Supported | Notes             |
+| -------- | --------- | ----------------- |
+| Markdown | Yes       | Full GFM support  |
+| MDX      | Yes       | React components  |
+| Themes   | Yes       | Customizable      |
+| Plugins  | Partial   | Growing ecosystem |
+
+### Aligned Table
+
+| Left Aligned | Center Aligned | Right Aligned |
+| :----------- | :------------: | ------------: |
+| Left 1       |    Center 1    |       Right 1 |
+| Left 2       |    Center 2    |       Right 2 |
+| Left 3       |    Center 3    |       Right 3 |
+
+### Complex Table
+
+| Language   | Type        | Paradigm       | First Release | Popular Uses             |
+| ---------- | ----------- | -------------- | ------------- | ------------------------ |
+| JavaScript | Interpreted | Multi-paradigm | 1995          | Web development, Node.js |
+| Python     | Interpreted | Multi-paradigm | 1991          | Data science, automation |
+| TypeScript | Compiled    | Multi-paradigm | 2012          | Large-scale applications |
+| Rust       | Compiled    | Multi-paradigm | 2015          | Systems programming      |
+
+***
+
+## Links
+
+### Basic Links
+
+Visit [Monadic](https://monadic.app) for more information.
+
+### Links with Titles
+
+Check out [Monadic Documentation](https://docs.monadic.app "Official Documentation").
+
+### Auto-linked URLs
+
+<https://monadic.app>
+
+### Reference-style Links
+
+Here's a link to [GitHub][1] and another to [VS Code][2].
+
+[1]: https://github.com
+
+[2]: https://code.visualstudio.com
+
+***
+
+## Blockquotes
+
+### Simple Blockquote
+
+> This is a blockquote. It can span multiple lines and should be visually distinct from regular paragraphs.
+
+### Nested Blockquote
+
+> This is a blockquote.
+>
+> > This is a nested blockquote.
+> >
+> > It can also span multiple lines.
+>
+> Back to the first level.
+
+### Blockquote with Other Elements
+
+> ### Heading in Blockquote
+>
+> * List item 1
+> * List item 2
+>
+> ```javascript
+> // Code in blockquote
+> console.log("Hello from blockquote!");
+> ```
+>
+> **Bold text** and *italic text* in blockquote.
+
+***
+
+## Horizontal Rules
+
+This is some text before the horizontal rule.
+
+***
+
+This is some text after the horizontal rule.
+
+***
+
+Another horizontal rule style.
+
+***
+
+And another style.
+
+***
+
+## Images
+
+### Basic Image
+
+![Placeholder Image](https://dummyimage.com/600x300/0066cc/ffffff?text=Monadic+Test+Image)
+
+### Image with Title
+
+![Landscape](https://dummyimage.com/800x400/4CAF50/ffffff?text=Landscape+Image "Beautiful Landscape")
+
+### Multiple Images
+
+![Image 1](https://dummyimage.com/300x200/FF5722/ffffff?text=Image+1)
+![Image 2](https://dummyimage.com/300x200/2196F3/ffffff?text=Image+2)
+![Image 3](https://dummyimage.com/300x200/9C27B0/ffffff?text=Image+3)
+
+***
+
+## Inline Formatting
+
+### Basic Formatting
+
+This paragraph contains **bold text**, *italic text*, ***bold and italic text***, ~~strikethrough text~~, and `inline code`.
+
+### Links and Code
+
+Visit the [Monadic GitHub](https://monadic.app) repository and try `npm install monadic`.
+
+### Emoji (if supported)
+
+Hello 👋 World 🌍! This is a test 🧪 of emoji support.
+
+### Abbreviations
+
+The HTML specification is maintained by the W3C.
+
+\*\[HTML]: HyperText Markup Language
+\*\[W3C]: World Wide Web Consortium
+
+### Subscript and Superscript
+
+H~~2~~O is water.
+
+X^2^ + Y^2^ = Z^2^
+
+### Keyboard Keys
+
+Press <kbd>Cmd</kbd> + <kbd>S</kbd> to save the file.
+
+***
+
+## Special Features
+
+### Footnotes
+
+Here's a sentence with a footnote[^1].
+
+Here's another with a longer footnote[^2].
+
+[^1]: This is the first footnote.
+
+[^2]: This is the second footnote with multiple lines.
+    It can span multiple paragraphs.
+
+    And include code blocks:
+
+    ```javascript
+    console.log("In a footnote!");
+    ```
+
+### Definition Lists
+
+Term 1
+: Definition 1
+
+Term 2
+: Definition 2a
+: Definition 2b
+
+Complex Term
+: This is a longer definition that spans multiple lines and explains the term in greater detail. It provides context and examples.
+
+***
+
+## Edge Cases
+
+### Empty Code Block
+
+```
+```
+
+### Code Block with Long Lines
+
+```javascript
+const veryLongVariableName = "This is a very long string that might cause horizontal scrolling if the code block doesn't handle overflow properly. Let's make it even longer to be sure!";
+```
+
+### Nested Lists with Code
+
+1. First item
+   ```javascript
+   // Code in list
+   console.log("Hello");
+   ```
+2. Second item
+   * Nested bullet
+     ```python
+     # More code
+     print("World")
+     ```
+
+### Special Characters
+
+Testing special characters: & < > " ' \` @ # $ % ^ \* ( ) { } \[ ] | \ / ? ! \~ + = - \_ : ; , .
+
+***
+
+## End of Storybook
+
+This storybook page should render all common UI elements correctly. Use it as a baseline for visual regression testing and theme development.
+]]></content:encoded>
+      <author><![CDATA[Monadic Team]]></author>
+    </item>
+    <item>
+      <title><![CDATA[2023 Year in Review]]></title>
+      <link>https://shashankshekhar.net/mono//year-review.html</link>
+      <guid isPermaLink="true">https://shashankshekhar.net/mono//year-review.html</guid>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[2023 Year in Review Looking back at the achievements and lessons from 2023. Highlights Launched new projects Learned new technologies Traveled to new places This post is in the blog/2023 folder.]]></description>
+      <content:encoded><![CDATA[# 2023 Year in Review
+
+Looking back at the achievements and lessons from 2023.
+
+## Highlights
+
+* Launched new projects
+* Learned new technologies
+* Traveled to new places
+
+This post is in the **blog/2023** folder.
+]]></content:encoded>
+      <author><![CDATA[Test Author]]></author>
+    </item>
+  </channel>
+</rss>

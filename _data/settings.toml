@@ -1,0 +1,7 @@
+[analytics]
+enabled = false
+provider = "none"
+
+[features]
+newsletter = true
+comments = false

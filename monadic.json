@@ -1,0 +1,121 @@
+{
+  "version": "1.0",
+  "projectName": "demo-blog",
+  "site": {
+    "title": "Monadic E2E Test Blog",
+    "description": "A demo blog for testing Monadic themes and features",
+    "author": "Test Author",
+    "url": "https://shashankshekhar.net/mono/"
+  },
+  "build": {
+    "output": "_site",
+    "draftBehavior": "remove",
+    "devServerPort": 4747
+  },
+  "theme": {
+    "engine": "liquid",
+    "syntaxTheme": "vs2015",
+    "showLineNumbers": true,
+    "showCopyButton": true,
+    "footer": {
+      "menu": [],
+      "social": []
+    },
+    "post": {
+      "show_author": true,
+      "show_date": true,
+      "show_tags": true,
+      "show_categories": true,
+      "show_series": true,
+      "show_reading_time": true,
+      "show_related_posts": true
+    }
+  },
+  "features": {
+    "comments": "none",
+    "rss": true,
+    "i18n": true
+  },
+  "github": {
+    "repo": "shashank-shekhar/mono"
+  },
+  "content": {
+    "folders": [
+      {
+        "path": "posts",
+        "title": "Posts",
+        "order": 0,
+        "enabled": true
+      },
+      {
+        "path": "blog",
+        "title": "Blog",
+        "icon": "📝",
+        "order": 1,
+        "enabled": true
+      },
+      {
+        "path": "tutorials",
+        "title": "Tutorials",
+        "icon": "🎓",
+        "order": 2,
+        "enabled": true
+      },
+      {
+        "path": "notes",
+        "title": "Notes",
+        "icon": "📔",
+        "order": 3,
+        "enabled": true
+      }
+    ],
+    "defaultFolder": "posts",
+    "autoDetectNesting": 0
+  },
+  "pagination": {
+    "enabled": true,
+    "postsPerPage": 12
+  },
+  "permalink": {
+    "style": "default"
+  },
+  "seo": {
+    "enabled": true,
+    "language": "en",
+    "titleSeparator": " - ",
+    "robotsDefault": "index, follow",
+    "descriptionMaxLength": 160
+  },
+  "shortcodes": {
+    "enabled": true
+  },
+  "excerpt": {
+    "length": 200,
+    "unit": "characters",
+    "separator": "<!-- more -->"
+  },
+  "images": {
+    "enabled": true
+  },
+  "collections": [
+    {
+      "name": "projects",
+      "path": "_projects",
+      "layout": "collection-item",
+      "output": true,
+      "sortBy": "date",
+      "sortOrder": "desc",
+      "searchable": true
+    }
+  ],
+  "i18n": {
+    "defaultLocale": "en",
+    "locales": [
+      "en",
+      "hi"
+    ],
+    "prefixDefaultLocale": false,
+    "fallbackLocale": "en",
+    "translationsDir": "_i18n"
+  }
+}

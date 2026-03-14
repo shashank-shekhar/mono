@@ -1,0 +1,8 @@
+admin:
+  name: Test Author
+  bio: A demo blog author
+  avatar: /assets/images/avatar.png
+
+guest:
+  name: Guest Writer
+  bio: Occasional contributor covering tutorials and tech topics
